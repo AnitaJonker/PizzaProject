@@ -3,7 +3,7 @@ import React from 'react'
 //structure reference from Javascript Mastery
 import {Footer,Blog,Possibility, Features, WhatGPT3,Header} from './containers'
 import {CTA,Brand,Navbar} from './components';
-//import Button from '@mui/material/Button';
+import './App.css';
 
 export const App = () => {
   return (
