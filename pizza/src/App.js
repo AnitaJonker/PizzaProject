@@ -7,18 +7,23 @@ import './App.css';
 
 export const App = () => {
   return (
+    <div className='background-image'>
     <div className="App">
       <div className="gradient__bg">
+     
         <Navbar />
-        <Header />
       </div>
-      <Brand />
+      
+      {/* <Brand />
       <WhatGPT3 />
       <Features />
       <Possibility />
-      <CTA />
+      <CTA /> */}
       <Blog />
-      <Footer />
+
+
+      </div>
+      {/* <Footer /> */}
     </div>
   );
 };

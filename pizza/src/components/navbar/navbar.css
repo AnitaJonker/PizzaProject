@@ -1,0 +1,24 @@
+.pizza__navbar{
+    display:flex;
+    background:'linear-gradient(90deg, rgba(49, 220, 255, 0.92) 18%, rgba(177, 255, 91, 0.74) 47%, rgba(49, 220, 255, 1) 86%)'; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    color: #fff;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    border-radius: 5px;
+    border: 0;
+    outline:none;
+    
+}
+
+
+.pizza__navbar-Header{
+ flex: 1;
+ display: flex;
+ justify-content: flex-start;
+ align-items: center;
+
+}

@@ -29,23 +29,13 @@ const theme = createTheme({
 
 export const Navbar = () => {
   return (
-  
-    <Box sx={{ flexGrow: 1 }}>
+    <div className="pizza__navbar" >
+     
+     <Button className='pizza__navbar-Header' color="inherit">Pizza Project</Button>
    
-     <AppBar  style={{ background:'conic-gradient(from 100deg at 55% 45%, #2D0453C4 30%,  #9E9AFFD1 70%,#ffff66 77%, #5a3d76 99%)'}} position="static">
-       <Toolbar>
-         <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-           The Pizza Project
-         </Typography>
-         
-        {/* <Button color="inherit">Home</Button>
-       <Button color="inherit">About Pizza</Button>
-       <Button color="inherit">Why Pizza is the best</Button>
-       <Button color='secondary' >Pizza is great but Pasta</Button>  */}
-       </Toolbar>
-     </AppBar>
 
-    </Box>
+       </div>
+
    
   )
 }
@@ -54,3 +44,19 @@ export default Navbar;
 
 
 
+// <Box sx={{ flexGrow: 1 }}>
+   
+// <AppBar  position="static">
+//   <Toolbar>
+//     <Typography variant="h2" component="div" sx={{ flexGrow: 1 }}>
+//       The Pizza Project
+//     </Typography>
+    
+//    {/* <Button color="inherit">Home</Button>
+//   <Button color="inherit">About Pizza</Button>
+//   <Button color="inherit">Why Pizza is the best</Button>
+//   <Button color='secondary' >Pizza is great but Pasta</Button>  */}
+//   </Toolbar>
+// </AppBar>
+
+// </Box>
