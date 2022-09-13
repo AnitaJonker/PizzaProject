@@ -20,8 +20,25 @@ function Item(props) {
   );
 }
 
+// import React from 'react'
+// debugger;
+// export const Books__Comp = (props) => {
+//   return <div>
+//     <h1>These books are from the API </h1>
+//     {console.log(props.books)}
+//     {props.books.map((book) => { 
+//       return <div key={book.id}>
+//       <h1>{book.title}</h1>
+//       <p>{book.description}</p>
+//       </div>
+//     })}
+// </div>;
+
+// }
+// export default Books__Comp;
 export function Blog(props) {
   return (
+    
     <div style={{ width: '100%' }}>
       <Box
         sx={{
@@ -37,11 +54,14 @@ export function Blog(props) {
           borderRadius: 1,
         }}
       >
-        <Paper elevation={3}>Trello card 1 </Paper>
-        <Paper elevation={3}>Trello card 1</Paper>
-        <Paper elevation={3}>Trello card 1</Paper>
-      </Box>
 
+           {props.books.map((book) => { 
+          return <div key={book.id}>
+          <Paper elevation={3}>{book.title} </Paper>
+          <Paper elevation={3}>{book.description}</Paper>
+        </div>
+     })}
+      </Box>
     </div>
   );
 }
