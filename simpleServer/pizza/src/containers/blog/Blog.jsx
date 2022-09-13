@@ -20,30 +20,30 @@ function Item(props) {
   );
 }
 
-export const Blog = (props) => {
+export function Blog(props) {
   return (
-      <div style={{ width: '100%' }}>
-        <Box
-          sx={{
-            display: 'flex',
-            flexDirection: 'wrap',
-            '& > :not(style)': {
-          m: 1,
-          width: 128,
-          height: 128,
-        },
-            p: 1,
+    <div style={{ width: '100%' }}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'wrap',
+          '& > :not(style)': {
             m: 1,
-            borderRadius: 1,
-          }}
-        >
-          <Paper elevation={3}>Trello card 1 {props.books.map((book) => {re</Paper>
-          <Paper elevation={3}>Trello card 1</Paper>
-          <Paper elevation={3}>Trello card 1</Paper>
-        </Box>
-      
-      </div>
-  )
+            width: 128,
+            height: 128,
+          },
+          p: 1,
+          m: 1,
+          borderRadius: 1,
+        }}
+      >
+        <Paper elevation={3}>Trello card 1 </Paper>
+        <Paper elevation={3}>Trello card 1</Paper>
+        <Paper elevation={3}>Trello card 1</Paper>
+      </Box>
+
+    </div>
+  );
 }
 
 export default Blog
