@@ -1,55 +1,63 @@
 import React, { useEffect, useState } from 'react'
 import {Footer,Blog,Possibility, Features, WhatGPT3,Header} from './containers'
-import {CTA,Brand,Navbar} from './components';
+import {CTA,Brand,Navbar,Books__Comp} from './components';
 import './App.css';
 import axios from 'axios';
 
 
-const API_URL = 'http://127.0.0.1:3000/';
+const API_URL = 'http://localhost:3000/api/v1/books';
 
-async function getAPIData() {
-  const response = await axios.get(API_URL);
-  return response.data;
+function getAPIData() {
+  return axios.get(API_URL).then((response) => response.data);
 }
 
-function App  {
+
+  function App(){
   const [books,setBooks] = useState([]);
   
   
   useEffect(() => {
     let mounted = true;
     getAPIData().then((items) => {
-
       if(mounted){
-
         setBooks(items);
+        console.log(items + 'test');
       }
     });
+    
     return () => (mounted = false);
 }, []);
 
   
   return (
-    
-    <div className='background-image'>
     <div className="App">
-      <div className="gradient__bg">
-     <Books books={books} />
-        <Navbar />
-      </div>
+  
+     {/* <Books__Comp books={books} /> */}
+     <div className='background-image'>
+     <div className="gradient__bg">
+   
+     {/* <Books__Comp books={books} /> */}
+     <Navbar />
+   
+     </div>
+     <Blog books={books} /> 
+     </div>
+     
+     </div>
       
-      {/* <Brand />
-      <WhatGPT3 />
-      <Features />
-      <Possibility />
-      <CTA /> */}
-      <Blog />
+    //   {/* <Brand />
+    //   <WhatGPT3 />
+    //   <Features />
+    //   <Possibility />
+    //   <CTA /> */}
+     
 
 
-      </div>
-      {/* <Footer /> */}
-    </div>
+    
+    //   {/* <Footer /> */}
+    // </div>
   );
 };
 
 export default App
+
