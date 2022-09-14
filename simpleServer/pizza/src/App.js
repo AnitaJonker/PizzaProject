@@ -31,8 +31,7 @@ function getAPIData() {
   
   return (
     <div className="App">
-  
-     {/* <Books__Comp books={books} /> */}
+      {/* <Books__Comp books={books} /> */}
      <div className='background-image'>
      <div className="gradient__bg">
    
