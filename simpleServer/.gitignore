@@ -40,3 +40,9 @@
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
+
+/app/assets/builds/*
+!/app/assets/builds/.keep
+
+#ignore secret keys
+/config/secret.yml
