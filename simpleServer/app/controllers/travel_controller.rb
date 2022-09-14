@@ -12,7 +12,7 @@ class TravelController < ApplicationController
     # puts url
     # puts $trello_api_url.escape 
     # url = $trello_api_url
-    render json: request_api($trello_api_url)
+    render json: request_api($pizza_trello_board)
   end
 end
 
