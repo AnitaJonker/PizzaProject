@@ -5,22 +5,23 @@ import './App.css';
 import axios from 'axios';
 
 
-const API_URL = 'http://localhost:3000/api/v1/books';
+const API_URL = 'http://localhost:3000/travel';
+//const API_URL = 'http://localhost:3000/api/v1/books';
 
-function getAPIData() {
-  return axios.get(API_URL).then((response) => response.data);
+async function getAPIData() {
+  const response = await axios.get(API_URL);
+  return response.data;
 }
 
-
   function App(){
-  const [books,setBooks] = useState([]);
+  const [trelloDetails,setTrello] = useState([]);
   
   
   useEffect(() => {
     let mounted = true;
     getAPIData().then((items) => {
       if(mounted){
-        setBooks(items);
+        setTrello(items);
         console.log(items + 'test');
       }
     });
@@ -36,10 +37,10 @@ function getAPIData() {
      <div className="gradient__bg">
    
      {/* <Books__Comp books={books} /> */}
-     <Navbar />
+     { <Navbar/>}
    
      </div>
-     <Blog books={books} /> 
+     <Blog trello={trelloDetails} /> 
      </div>
      
      </div>

@@ -2,41 +2,36 @@
 import React from "react";
 import "./navbar.css";
 import Button from '@mui/material/Button';
-import Chip from '@mui/material/Chip';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import { createTheme } from '@mui/material/styles';
+// import Chip from '@mui/material/Chip';
+// import AppBar from '@mui/material/AppBar';
+// import Box from '@mui/material/Box';
+// import Toolbar from '@mui/material/Toolbar';
+// import Typography from '@mui/material/Typography';
+// import { createTheme } from '@mui/material/styles';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#3f51b5',
-    },
-    secondary: {
-      main: '#f50057',
-    },
-    background: {
-      paper: '#000000',
-    },
-    error: {
-      main: '#ff9800',
-    },
-  } 
-});
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#3f51b5',
+//     },
+//     secondary: {
+//       main: '#f50057',
+//     },
+//     background: {
+//       paper: '#000000',
+//     },
+//     error: {
+//       main: '#ff9800',
+//     },
+//   } 
+// });
 
 
-export const Navbar = () => {
+export const Navbar = (props) => {
   return (
     <div className="pizza__navbar" >
-     
-     <Button className='pizza__navbar-Header' color="inherit">Pizza Project</Button>
-   
-
+     <Button className='pizza__navbar-Header' color="inherit">The Pizza Project</Button>
        </div>
-
-   
   )
 }
 
