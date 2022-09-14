@@ -5,8 +5,21 @@ Rails.application.routes.draw do
       resources :books
     end
   end
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-
-  # Defines the root path route ("/")
-  # root "articles#index"
+  resources :travel
 end
+#   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+
+#   # Defines the root path route ("/")
+#   /# root "articles#index"
+#   root to: 'travel#index'
+#   get '/search' => 'travel#search'
+# end
+
+# Rails.application.routes.draw do
+  
+  # get 'travel'
+  # resources :spa
+  # get 'spa', to: 'spa'
+  # root 'travel#index'
+  # get '/search' => 'travel#search'
+# end
