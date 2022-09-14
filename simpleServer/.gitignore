@@ -46,3 +46,4 @@ yarn-debug.log*
 
 #ignore secret keys
 /config/secret.yml
+/config/secretKeys.rb

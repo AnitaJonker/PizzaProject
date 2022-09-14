@@ -1,10 +1,24 @@
 class TravelController < ApplicationController
   def index
-    # url = ""
-    render json: request_api(url)
-
+     require_relative '../../config/secretKeys.rb'
+    # require 'cgi'
+    # url = CGI.unescape(ENV[trelloCall])
+    # puts "Try this" , ENV.keys['api_url']
+    # file = YAML.load('secret.yml')
+    # puts $trello_api_url
+    #YAML.load('secret.yml')
+    # puts "hello there"
+    # url = getGlobal()
+    # puts url
+    # puts $trello_api_url.escape 
+    # url = $trello_api_url
+    render json: request_api($trello_api_url)
   end
 end
+
+
+
+
 # app/controllers/travel_controller.rb
 # ...
 # def search
@@ -23,12 +37,25 @@ private
 
 require 'excon'
 def request_api(url)
-  response = Excon.post( url)
+  response = Excon.get(url)
+  return JSON.parse(response.body)
+end
+
+
   # return nil if response.status != 200s
   # puts (response)
- return JSON.parse(response.body)
+  # response.
+  # board = me.boards.first
+# puts board.name
+# render json:board
+# puts "Lists: #{board.lists.map {|x| x.name}.join(', ')}"
+# puts "Members: #{board.members.map {|x| x.full_name}.join(', ')}"
+
+# def getGlobal()
+#   puts  $global_var
+#   return $global_var
   
-end
+# end
 
 
 def show
